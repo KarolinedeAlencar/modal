@@ -1,0 +1,39 @@
+{
+  "name": "modal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:server": "browser-sync start --server --files *",
+    "dev:eslint": "eslint js/*.js || exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KarolinedeAlencar/modal.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KarolinedeAlencar/modal/issues"
+  },
+  "homepage": "https://github.com/KarolinedeAlencar/modal#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.13"
+  },
+  "eslintConfig": {
+    "env": {
+      "es6": true,
+      "browser": true
+    },
+    "extends": "airbnb",
+    "rules": {
+      "no-console": 1
+    }
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-jsx-a11y": "^6.0.2",
+    "eslint-plugin-react": "^7.4.0"
+  }
+}
