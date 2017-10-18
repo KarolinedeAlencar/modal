@@ -120,7 +120,7 @@ body {
 
 .modal__footer {
   display: flex;
-  
+
   background-color: #F5F5F5;
   border-top: 1px solid #e6e6e6;
 }
@@ -166,4 +166,71 @@ body {
     border-radius: 6px;
   }
 
+}
+
+/* STEPS */
+
+.modal__steps {
+  padding: 4rem .4rem;
+}
+
+/* FIRST STEP */
+
+.step__item {
+  flex: 50%;
+}
+
+.step__planPrice {
+  display: flex;
+  justify-content: center;
+  height: 5rem;
+}
+
+.step__coin {
+  color: var(--secundaryColor);
+  font-size: .9rem;
+}
+
+.step__price {
+  margin-top: -1rem;
+
+  color: var(--mainColor);
+  font-size: 6rem;
+  font-weight: bold;
+}
+
+.step__cents {
+  color: var(--mainColor);
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.step__planType {
+  align-self: flex-end;
+  margin-left: -3rem;
+
+  color: #D8317F;
+  font-size: 1rem;
+}
+
+.step__plans {
+  margin-top: 1rem;
+}
+
+.step__label {
+  display: block;
+  margin-top: .4rem;
+  padding: 1rem .4rem;
+
+  color: var(--mainColor);
+  font-size: 1.2rem;
+  font-weight: bold;
+
+  border: 1px solid #e6e6e6;
+  border-radius: 6px;
+}
+
+.step__plans--checked {
+  color: #fff;
+  background-color: var(--mainColor);
 }
