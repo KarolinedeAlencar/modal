@@ -111,20 +111,59 @@ body {
   border-color: transparent transparent transparent #E9E9E9;
 }
 
-.breadcrump--active {x
+.breadcrump--active {
   color: var(--mainColor);
   background-color: #fff;
 }
 
 /* FOOTER */
 
-.footer__btn {
-  width: 100%;
-  padding: 1rem;
+.modal__footer {
+  display: flex;
   
+  background-color: #F5F5F5;
+  border-top: 1px solid #e6e6e6;
+}
+
+@media screen and (min-width: 768px) {
+
+  .modal__footer {
+    padding: 1rem 2rem;
+  }
+
+}
+
+.footer__seal {
+  display: none;
+  flex: 50%;
+}
+
+@media screen and (min-width: 768px) {
+
+  .footer__seal {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+.footer__btn {
+  flex: 40%;
+  width: 100%;
+  padding: 1.2rem 1rem;
+
   color: #fff;
+  font-size: 1rem;
   font-weight: bold;
 
   background-color: var(--accentColor);
   border: none;
+}
+
+@media screen and (min-width: 768px) {
+
+  .footer__btn {
+    border-radius: 6px;
+  }
+
 }
