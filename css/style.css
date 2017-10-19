@@ -281,3 +281,14 @@ body {
   margin: 0;
   vertical-align: super;
 }
+
+.step--firstStep {
+  display: none;
+}
+
+/* SECOND STEP */
+
+.step--secondStep {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
