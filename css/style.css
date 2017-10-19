@@ -13,11 +13,11 @@ body {
   width: 100%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
 
   .modal {
     width: 80%;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 1rem auto;
 
     border-radius: 8px;
@@ -75,7 +75,7 @@ body {
   border-top: 1px solid #e6e6e6;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
 
   .header__breadcrumb {
     display: flex;
@@ -125,7 +125,7 @@ body {
   border-top: 1px solid #e6e6e6;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
 
   .modal__footer {
     padding: 1rem 2rem;
@@ -138,7 +138,7 @@ body {
   flex: 50%;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
 
   .footer__seal {
     display: flex;
@@ -150,7 +150,7 @@ body {
 .footer__btn {
   flex: 40%;
   width: 100%;
-  padding: 1.2rem 1rem;
+  padding: 1.4rem 1rem;
 
   color: #fff;
   font-size: 1rem;
@@ -160,7 +160,7 @@ body {
   border: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1200px) {
 
   .footer__btn {
     border-radius: 6px;
@@ -174,28 +174,46 @@ body {
   padding: 4rem .4rem;
 }
 
+
+@media screen and (min-width: 1200px) {
+
+  .modal__steps {
+    padding: 4rem 2rem;
+  }
+
+}
+
+
 /* FIRST STEP */
 
 .step__item {
   flex: 50%;
 }
 
+@media screen and (min-width: 1200px) {
+
+  .step--firstStep {
+    display: flex;
+  }
+
+}
+
 .step__planPrice {
   display: flex;
   justify-content: center;
-  height: 5rem;
+  height: 6rem;
 }
 
 .step__coin {
   color: var(--secundaryColor);
-  font-size: .9rem;
+  font-size: 1.2em;
 }
 
 .step__price {
   margin-top: -1rem;
 
   color: var(--mainColor);
-  font-size: 6rem;
+  font-size: 7rem;
   font-weight: bold;
 }
 
@@ -207,7 +225,7 @@ body {
 
 .step__planType {
   align-self: flex-end;
-  margin-left: -3rem;
+  margin-left: -2rem;
 
   color: #D8317F;
   font-size: 1rem;
@@ -220,7 +238,7 @@ body {
 .step__label {
   display: block;
   margin-top: .4rem;
-  padding: 1rem .4rem;
+  padding: 1.4rem .4rem;
 
   color: var(--mainColor);
   font-size: 1.2rem;
@@ -233,4 +251,33 @@ body {
 .step__plans--checked {
   color: #fff;
   background-color: var(--mainColor);
+}
+
+.step__paymentMethods {
+  width: 60%;
+  margin: 3rem auto 0 auto;
+  margin-top: 3rem;
+  font-size: .9rem;
+  text-align: center;
+  border-top: 1px dashed #e6e6e6;
+}
+
+.paymentMethods__list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.paymentMethods__item {
+  color: var(--secundaryColor);
+}
+
+.paymentMethods__icon {
+  display: inline-block;
+  margin-right: .2rem;
+}
+
+.paymentMethods__method {
+  display: inline-block;
+  margin: 0;
+  vertical-align: super;
 }
