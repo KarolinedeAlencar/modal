@@ -9,6 +9,10 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .modal {
   width: 100%;
 }
@@ -91,7 +95,6 @@ body {
   margin: 0;
 
   color: #999999;
-  font-weight: bold;
   background-color: #E9E9E9;
 }
 
@@ -293,8 +296,42 @@ body {
   padding-right: 2rem;
 }
 
+@media screen and (min-width: 700px) {
+
+  .step--secondStep {
+    width: 75%;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+}
+
 .step__choicePlan {
   display: none;
+
+  color: #999999;
+  font-size: .9rem;
+}
+
+.choicePlan__type {
+  color: #000;
+}
+
+@media screen and (min-width: 700px) {
+
+  .step__choicePlan  {
+    display: block;
+  }
+
+}
+
+@media screen and (min-width: 700px) {
+
+  .form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
 }
 
 .form__label, .fieldset__legend {
@@ -316,6 +353,14 @@ body {
   border-radius: 3px;
 }
 
+@media screen and (min-width: 700px) {
+
+  .form__group, .form__fieldset {
+    flex: 20%;
+  }
+
+}
+
 .form__field--secCode {
   width: 40%;
 }
@@ -327,6 +372,18 @@ body {
 
 .form__group, .form__fieldset {
   margin-bottom: 1.4rem;
+}
+
+@media screen and (min-width: 700px) {
+
+  .form__group--larger {
+    flex: 60%;
+  }
+
+  .form__group--larger .form__field {
+    max-width: 460px;
+  }
+
 }
 
 .form__field--select {
