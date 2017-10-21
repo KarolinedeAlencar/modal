@@ -13,6 +13,7 @@ body {
   box-sizing: border-box;
 }
 
+
 .modal {
   width: 100%;
 }
@@ -292,6 +293,7 @@ body {
 /* SECOND STEP */
 
 .step--secondStep {
+  display: none;
   padding-left: .2rem;
   padding-right: 2rem;
 }
@@ -401,4 +403,34 @@ body {
 
   border: 1px solid #FDF1B0;
   background-color: #FCF7DE;
+}
+
+/*  FINAL STEP */
+
+.step--finalStep {
+  text-align: center;
+}
+
+.finalStep__message {
+  margin-bottom: 4rem;
+  color: var(--secundaryColor);
+  font-size: 1.8rem;
+}
+
+.finalStep__p {
+  margin: 0;
+}
+
+.finalStep__p--highlight {
+  font-weight: bold;
+}
+
+.finalStep__link {
+  padding: 1.4rem 6rem;
+
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: var(--mainColor);
+  border-radius: 6px;
 }
