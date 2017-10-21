@@ -96,31 +96,37 @@
           </div>
           <div class="step__form">
             <form class="form" action="">
-              <label  class="form__label">
-                Número do cartão
-                <input type="text" class="form__input" placeholder="Número do cartão">
-              </label>
-              <fieldset for="cardNumber" class="form__label">
-                <legend>Validade</legend>
-                <select name="Mês" class="form__select">
+              <div class="form__group">
+                <label for="cardNumber" class="form__label">
+                  Número do cartão
+                </label>
+                <input type="text" id="cardNumber" class="form__field" placeholder="Número do cartão">
+              </div>
+              <fieldset class="form__fieldset">
+                <legend class="fieldset__legend">Validade</legend>
+                <select name="Mês" class="form__field form__field--select">
                   <option value="Mês">Mês</option>
                   <option value="Jan">Jan</option>
                   <option value="Jan">Jan</option>
                 </select>
-                <select name="Ano" class="form__select">
+                <select name="Ano" class="form__field form__field--select">
                   <option value="Mês">Ano</option>
                   <option value="2018">2018</option>
                   <option value="Mês">2019</option>
                 </select>
               </fieldset>
-              <label class="form__label">
-                Nome do Titular
-                <input type="text" class="form__input" placeholder="Nome do Titular">
-              </label>
-              <label class="form__label">
-                Código de Segurança
-                <input type="text" class="form__input" placeholder="000">
-              </label>
+              <div class="form__group">
+                <label for="name" class="form__label">
+                  Nome do Titular
+                </label>
+                <input type="text" id="name" class="form__field" placeholder="Nome do Titular">
+              </div>
+              <div class="form__group">
+                <label for="securityCode" class="form__label">
+                  Código de Segurança
+                </label>
+                <input type="text" id="securityCode" class="form__field form__field--secCode" placeholder="000">
+              </div>
             </form>
           </div>
           <div class="step__warning">

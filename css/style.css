@@ -289,6 +289,59 @@ body {
 /* SECOND STEP */
 
 .step--secondStep {
-  padding-left: 6rem;
-  padding-right: 6rem;
+  padding-left: .2rem;
+  padding-right: 2rem;
+}
+
+.step__choicePlan {
+  display: none;
+}
+
+.form__label, .fieldset__legend {
+  display: block;
+  margin-bottom: .4rem;
+
+  color: var(--secundaryColor);
+  font-size: .9rem;
+}
+
+.form__field {
+  width: 100%;
+  padding: .6rem;
+
+  color: var(--secundaryColor);
+  font-size: .8rem;
+
+  border: 1px solid #e6e6e6;
+  border-radius: 3px;
+}
+
+.form__field--secCode {
+  width: 40%;
+}
+
+.form__fieldset {
+  padding: 0;
+  border: none;
+}
+
+.form__group, .form__fieldset {
+  margin-bottom: 1.4rem;
+}
+
+.form__field--select {
+  max-width: 100px;
+  background: none;
+}
+
+.step__warning {
+  width: 100%;
+  padding: .6rem;
+
+  color: #CAA767;
+  font-size: .8rem;
+  text-align: center;
+
+  border: 1px solid #FDF1B0;
+  background-color: #FCF7DE;
 }
