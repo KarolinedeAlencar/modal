@@ -1,3 +1,17 @@
+// Buttons
+const nextBtn = document.querySelector('[data-js="nextBtn"]');
+const prevBtn = document.querySelector('[data-js="prevBtn"]');
+const finishBtn = document.querySelector('[data-js="finishBtn"]');
+
+// Steps
+const firstStep = document.querySelector('[data-js="firstStep"]');
+const secondStep = document.querySelector('[data-js="secondStep"]');
+// const finalStep = document.querySelector('[data-js="finalStep"]');
+
+// Breadcrumbs
+const firstBreadcrumb = document.querySelector('[data-js="firstBreadcrumb"]');
+const secondBreadcrumb = document.querySelector('[data-js="secondBreadcrumb"]');
+
 function showPlansData(plans) {
   // Plan Price Container
   const planPrice = document.querySelector('[data-js="planPrice"]');
@@ -95,8 +109,33 @@ function showPlansData(plans) {
   });
 }
 
+function nextStep() {
+  const stepLabels = Array.from(document.querySelectorAll('[data-js="plansRadio"]'));
+  const choicePlanType = document.querySelector('[data-js="choicePlanType"]');
+
+  stepLabels.map((item) => {
+    if (item.children[0].checked) {
+      choicePlanType.innerHTML = `${item.children[0].value}`;
+    }
+    return false;
+  });
+
+  firstStep.classList.remove('active');
+  secondStep.classList.add('active');
+
+  // Hidding Next Button
+  nextBtn.classList.remove('active');
+  // Showing Finish Btn
+  finishBtn.classList.add('active');
+  // Showing Prev Btn
+  prevBtn.classList.add('active');
+  firstBreadcrumb.classList.remove('breadcrump--active');
+  secondBreadcrumb.classList.add('breadcrump--active');
+}
 // Data Fetch
 const plansPromise = fetch('server/data.json');
 plansPromise
   .then(data => data.json())
   .then(data => showPlansData(data.plans));
+
+nextBtn.addEventListener('click', nextStep);
