@@ -132,6 +132,19 @@ function nextStep() {
   firstBreadcrumb.classList.remove('breadcrump--active');
   secondBreadcrumb.classList.add('breadcrump--active');
 }
+
+function prevStep() {
+  firstStep.classList.add('active');
+  secondStep.classList.remove('active');
+  // Hidding Next Button
+  nextBtn.classList.add('active');
+  // Showing Finish Button
+  finishBtn.classList.remove('active');
+  prevBtn.classList.remove('active');
+
+  firstBreadcrumb.classList.add('breadcrump--active');
+  secondBreadcrumb.classList.remove('breadcrump--active');
+}
 // Data Fetch
 const plansPromise = fetch('server/data.json');
 plansPromise
@@ -139,3 +152,4 @@ plansPromise
   .then(data => showPlansData(data.plans));
 
 nextBtn.addEventListener('click', nextStep);
+prevBtn.addEventListener('click', prevStep);
