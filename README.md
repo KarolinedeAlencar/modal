@@ -4,11 +4,14 @@ Modal em Vanilla JS.
 
 ## Considerações
 
-O modal foi feito em Vanilla JS, não usei nenhum plugin para validação do número de cartão, utilizei apenas uma função do algoritmo de Luhn.
+Em relação ao JavaScript, o modal foi feito com JS puro e algumas features novas do ES6.
+Como não havia restrição de suporte a browsers antigos, optei por não usar o babel.
 
-Tomei a liberdade de fazer algumas mudanças no layout, mudando algumas cores e inserindo ícones diferentes.
+Para a qualidade de código, utilizei o ESLint e as configurações do Airbnb, com algumas customizações.
 
-O JSON estava com algumas informações divergentes, também tomei a liberdade de muda-los para ficar mais consistente com layout.
+Não utilizei nenhum plugin para validação do cartão, optei por utilizar o Algoritmo de Luhn.
+
+Em relação ao CSS, também foi utilizado features novas, como custom properties e flexbox.
 
 
 ## Getting Started
