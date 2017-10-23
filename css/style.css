@@ -13,16 +13,12 @@ body {
   box-sizing: border-box;
 }
 
-.icon__cvv {
-  display: inline-block;
-  width: 60px;
-  height: 60px;
-}
 
 /*  MODAL: ;*/
 
 .modal {
   width: 100%;
+  min-height: 100vh;
   background-color: #F5F5F5
 }
 
@@ -474,6 +470,12 @@ body {
     border-top: .11rem dashed #e6e6e6;
   }
 
+}
+
+.icon__cvv {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
 }
 
 .form__label, .fieldset__legend {

@@ -13,7 +13,7 @@ const firstBreadcrumb = document.querySelector('[data-js="firstBreadcrumb"]');
 const secondBreadcrumb = document.querySelector('[data-js="secondBreadcrumb"]');
 
 // Form inputs
-// const inputs = Array.from(document.querySelectorAll('.form__field'));
+const inputs = Array.from(document.querySelectorAll('.form__field'));
 const dateMonth = document.querySelector('[data-js="dateMonth"]');
 const dateYear = document.querySelector('[data-js="dateYear"]');
 const dateFieldset = document.querySelector('[data-js="dateFieldset"]');
@@ -116,17 +116,18 @@ function showPlansData(plans) {
   });
 }
 
-// function checkAllInputs() {
-//   const isAllOk = inputs.every((input) => {
-//      input.dataset.verified === "true";
-//   });
-//   if(isAllOk) {
-//     finishBtn.disabled = false;
-//   } else {
-//     finishBtn.disabled = true;
-//   }
-//
-// }
+function checkAllInputs() {
+  const isAllOk = inputs.every((input) => {
+     return input.dataset.verified === 'true';
+  });
+
+  if(isAllOk) {
+    finishBtn.disabled = false;
+  } else {
+    finishBtn.disabled = true;
+  }
+
+}
 
 function showErrorMessage(element) {
   return element.classList.add('invalid__field');
@@ -162,18 +163,29 @@ function paymentStep() {
   cardNumber.addEventListener('keyup', function () {
     if (luhnAlgorithim(this.value) === false) {
       showErrorMessage(this);
+      this.dataset.verified = 'false';
+      checkAllInputs();
     } else {
       this.classList.remove('invalid__field');
+      this.dataset.verified = 'true';
+      checkAllInputs();
     }
   });
 
-  dateFieldset.addEventListener('focusout', () => {
+  dateFieldset.addEventListener('change', () => {
     if (checkDate()) {
       dateMonth.classList.add('invalid__field');
       dateYear.classList.add('invalid__field');
+      dateMonth.dataset.verified = 'false';
+      dateYear.dataset.verified = 'false';
+      checkAllInputs();
+
     } else {
       dateMonth.classList.remove('invalid__field');
       dateYear.classList.remove('invalid__field');
+      dateMonth.dataset.verified = 'true';
+      dateYear.dataset.verified = 'true';
+      checkAllInputs();
     }
     return false;
   });
@@ -181,16 +193,26 @@ function paymentStep() {
   securityCode.addEventListener('keyup', function () {
     if (checkCode()) {
       showErrorMessage(this);
+      this.dataset.verified = 'false';
+      checkAllInputs();
+
     } else {
       this.classList.remove('invalid__field');
+      this.dataset.verified = 'true';
+      checkAllInputs();
     }
   });
 
   cardName.addEventListener('keyup', function () {
     if (this.value === '') {
       showErrorMessage(this);
+      this.dataset.verified = 'false';
+      checkAllInputs();
+
     } else {
       this.classList.remove('invalid__field');
+      this.dataset.verified ='true';
+      checkAllInputs();
     }
   });
 }

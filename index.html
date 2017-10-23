@@ -60,12 +60,12 @@
                 <label for="cardNumber" class="form__label">
                   Número do cartão
                 </label>
-                <input type="number" id="cardNumber" class="form__field form__field--cardNumber" data-js="cardNumber" placeholder="Número do cartão" required>
+                <input type="number" id="cardNumber" class="form__field form__field--cardNumber" data-js="cardNumber" data-verified="false" placeholder="Número do cartão" required>
                 <span class="message">Campo inválido.</span>
               </div>
               <fieldset class="form__fieldset" data-js="dateFieldset">
                 <legend class="fieldset__legend">Validade</legend>
-                <select name="Mês" class="form__field form__field--select" data-js="dateMonth" required>
+                <select name="Mês" class="form__field form__field--select" data-js="dateMonth" data-verified="false" required>
                   <option value="0">Mês</option>
                   <option value="1">01</option>
                   <option value="2">02</option>
@@ -80,7 +80,7 @@
                   <option value="11">11</option>
                   <option value="12">12</option>
                 </select>
-                <select name="Ano" class="form__field form__field--select" data-js="dateYear" required>
+                <select name="Ano" class="form__field form__field--select" data-js="dateYear" data-verified="false" required>
                   <option value="0">Ano</option>
                   <option value="2017">17</option>
                   <option value="2018">18</option>
@@ -93,14 +93,14 @@
                 <label for="name" class="form__label">
                   Nome do Titular
                 </label>
-                <input type="text" id="name" class="form__field" data-js="cardName" placeholder="Nome do Titular" required>
+                <input type="text" id="name" class="form__field" data-js="cardName" data-verified="false" placeholder="Nome do Titular" required>
                 <span class="message">Campo inválido.</span>
               </div>
               <div class="form__group">
                 <label for="securityCode" class="form__label">
                   Código de Segurança
                 </label>
-                <input type="number" id="securityCode" class="form__field form__field--secCode" data-js="securityCode" placeholder="000" required>
+                <input type="number" id="securityCode" class="form__field form__field--secCode" data-js="securityCode" data-verified="false" placeholder="000" required>
                 <span class="message">Campo inválido.</span>
               </div>
             </form>
@@ -133,7 +133,7 @@
         <button class="footer__btn active" type="button" data-js="nextBtn">
           Próximo passo: pagamento
         </button>
-        <button class="footer__btn" type="button" data-js="finishBtn">
+        <button class="footer__btn" type="button" data-js="finishBtn" disabled>
           Concluir minha assinatura
         </button>
       </footer>
