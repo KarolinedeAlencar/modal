@@ -14,15 +14,14 @@ body {
 }
 
 
-/*  MODAL: ;*/
+/*  MODAL: */
 
 .modal {
   width: 100%;
-  min-height: 100vh;
   background-color: #F5F5F5
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .modal {
     width: 80%;
@@ -76,7 +75,7 @@ body {
   font-weight: 400;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .header__title {
     font-weight: bold;
@@ -97,7 +96,7 @@ body {
   border-top: 1px solid #e6e6e6;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .header__breadcrumb {
     display: flex;
@@ -149,7 +148,7 @@ body {
   border-top: 1px solid #e6e6e6;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .modal__footer {
     padding: 1rem 2rem;
@@ -162,7 +161,7 @@ body {
   flex: 50%;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .footer__seal {
     display: flex;
@@ -189,7 +188,7 @@ body {
   background-color: grey;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .footer__btn {
     border-radius: 6px;
@@ -203,7 +202,7 @@ body {
   padding: 4rem .4rem;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .modal__steps {
     padding: 3.6rem 2rem;
@@ -219,7 +218,7 @@ body {
   flex: 50%;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .step__item {
     height: 270px;
@@ -230,7 +229,7 @@ body {
 
 /* FIRST STEP */
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .step--firstStep.active {
     display: flex;
@@ -286,7 +285,7 @@ body {
   text-align: center;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .step__total {
     display: block;
@@ -318,7 +317,7 @@ body {
   background-color: var(--mainColor);
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .step__plans--checked::before {
     content: '';
@@ -349,7 +348,7 @@ body {
   border-top: 1px dashed #e6e6e6;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .step__paymentMethods {
     display: block;
@@ -431,7 +430,7 @@ body {
   padding-right: 2rem;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .step--secondStep {
     width: 75%;
@@ -448,7 +447,7 @@ body {
   font-size: .9rem;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .step__choicePlan  {
     display: block;
@@ -460,7 +459,7 @@ body {
   color: #000;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .form {
     display: flex;
@@ -498,7 +497,7 @@ body {
   border-radius: 3px;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .form__group, .form__fieldset {
     flex: 20%;
@@ -529,7 +528,7 @@ body {
   margin-bottom: 1.4rem;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1170px) {
 
   .form__group--larger {
     flex: 60%;
@@ -542,7 +541,7 @@ body {
 }
 
 .form__field--select {
-  max-width: 100px;
+  max-width: 95px;
   background-color: #fff;
 }
 
@@ -565,14 +564,31 @@ body {
 }
 
 .finalStep__icon {
-  width: 10%;
+  width: 30%;
+  max-width: 140px;
   margin: 1rem auto;
+}
+
+@media screen and (min-width: 1170px) {
+
+  .finalStep__icon {
+    width: 10%;
+  }
+
 }
 
 .finalStep__message {
   margin-bottom: 4rem;
   color: var(--secundaryColor);
-  font-size: 2rem;
+  font-size: 1.4rem;
+}
+
+@media screen and (min-width: 1170px) {
+
+  .finalStep__message {
+    font-size: 2rem;
+  }
+
 }
 
 .finalStep__p {
