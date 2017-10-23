@@ -29,7 +29,11 @@
     "rules": {
       "no-console": 1,
       "comma-dangle": ["error", "never"],
-      "no-param-reassign": 1
+      "no-param-reassign": 1,
+      "no-mixed-operators": 1,
+      "no-plusplus": 1,
+      "no-sequences": 1,
+      "no-unused-expressions": 1
     }
   },
   "devDependencies": {

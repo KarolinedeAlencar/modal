@@ -16,8 +16,8 @@
         <button class="header__btn header__btn--previous" data-js="prevBtn">〈 </button>
         <h1 class="header__title">Assine o Sexlog VIP</h1>
         <button class="header__btn header__btn--next">X</button>
-        <div class="header__breadcrumb">
-          <div class="breadcrumb__step  breadcrump--active" data-js="firstBreadcrumb">
+        <div class="header__breadcrumb" data-js="headerBreadcrumb">
+          <div class="breadcrumb__step breadcrump--active" data-js="firstBreadcrumb">
             <p>
               Escolha o plano ideal pra você
             </p>
@@ -60,12 +60,12 @@
                 <label for="cardNumber" class="form__label">
                   Número do cartão
                 </label>
-                <input type="number" id="cardNumber" class="form__field" data-js="cardNumber" placeholder="Número do cartão">
+                <input type="number" id="cardNumber" class="form__field form__field--cardNumber" data-js="cardNumber" placeholder="Número do cartão" required>
                 <span class="message">Campo inválido.</span>
               </div>
               <fieldset class="form__fieldset" data-js="dateFieldset">
                 <legend class="fieldset__legend">Validade</legend>
-                <select name="Mês" class="form__field form__field--select" data-js="dateMonth">
+                <select name="Mês" class="form__field form__field--select" data-js="dateMonth" required>
                   <option value="0">Mês</option>
                   <option value="1">01</option>
                   <option value="2">02</option>
@@ -80,7 +80,7 @@
                   <option value="11">11</option>
                   <option value="12">12</option>
                 </select>
-                <select name="Ano" class="form__field form__field--select" data-js="dateYear">
+                <select name="Ano" class="form__field form__field--select" data-js="dateYear" required>
                   <option value="0">Ano</option>
                   <option value="2017">17</option>
                   <option value="2018">18</option>
@@ -93,15 +93,14 @@
                 <label for="name" class="form__label">
                   Nome do Titular
                 </label>
-                <input type="text" id="name" class="form__field" data-js="cardName" placeholder="Nome do Titular">
+                <input type="text" id="name" class="form__field" data-js="cardName" placeholder="Nome do Titular" required>
                 <span class="message">Campo inválido.</span>
-
               </div>
               <div class="form__group">
                 <label for="securityCode" class="form__label">
                   Código de Segurança
                 </label>
-                <input type="number" id="securityCode" class="form__field form__field--secCode" data-js="securityCode" placeholder="000">
+                <input type="number" id="securityCode" class="form__field form__field--secCode" data-js="securityCode" placeholder="000" required>
                 <span class="message">Campo inválido.</span>
               </div>
             </form>
@@ -114,7 +113,9 @@
         </div>
         <div class="step step--finalStep" data-js="finalStep">
           <div class="finalStep__icon">
-            <img src="" alt="">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 426.667 426.667">
+                <path d="M213.333 0C95.518 0 0 95.514 0 213.333s95.518 213.333 213.333 213.333c117.828 0 213.333-95.514 213.333-213.333S331.157 0 213.333 0zm-39.134 322.918l-93.935-93.931 31.309-31.309 62.626 62.622 140.894-140.898 31.309 31.309-172.203 172.207z" fill="#6AC259"/>
+              </svg>
           </div>
           <div class="finalStep__message">
             <p class="finalStep__p finalStep__p--highlight">Parabéns!</p>
@@ -125,14 +126,14 @@
           </a>
         </div>
       </main>
-      <footer class="modal__footer">
+      <footer class="modal__footer" data-js="footer">
         <div class="footer__seal">
           <img src="img/seal-SSL.png" alt="Secure GlobalSign Seal">
         </div>
         <button class="footer__btn active" type="button" data-js="nextBtn">
           Próximo passo: pagamento
         </button>
-        <button class="footer__btn" type="button" data-js="finishBtn" disabled>
+        <button class="footer__btn" type="button" data-js="finishBtn">
           Concluir minha assinatura
         </button>
       </footer>
