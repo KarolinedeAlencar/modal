@@ -1,0 +1,69 @@
+{
+   "plans":[
+      {
+         "id":1,
+         "name":"1 mês",
+         "discount":"",
+         "total":"Total: <span style='color: #661B82'>R$ 49,90</span> em até 1x",
+         "price":{
+            "currency":"R$",
+            "integer":49,
+            "decimal":90,
+            "periodicy":"/mês"
+         },
+         "parc":[],
+         "payments": [
+             "Pagamento no <b>cartão de crédito</b>",
+             "Parcela única no <b>débito em conta</b>",
+             "Pagamento no <b>boleto bancário</b>"
+         ]
+      },
+      {
+         "id":2,
+         "name":"3 meses",
+         "discount":"Economize 40%",
+         "total":"Total: <span style='color: #661B82'>R$ 89,70</span> em até 3x iguais",
+         "price":{
+            "currency":"R$",
+            "integer":29,
+            "decimal":90,
+            "periodicy":"/mês"
+         },
+         "parc":[
+            "Parcelado em 1x de R$ 89,70",
+            "Parcelado em 2x de R$ 44,85",
+            "Parcelado em 3x de R$ 29,90"
+        ],
+        "payments": [
+            "Até 3x iguais no <b>cartão de crédito</b>",
+            "Parcela única no <b>débito em conta</b>",
+            "Pagamento no <b>boleto bancário</b>"
+        ]
+      },
+      {
+         "id":3,
+         "name":"6 meses",
+         "discount":"Economize 54%",
+         "total":"Total: <span style='color: #661B82'>R$ 137,40</span> em até 6x iguais",
+         "price":{
+            "currency":"R$",
+            "integer":22,
+            "decimal":90,
+            "periodicy":"/mês"
+         },
+         "parc":[
+            "Parcelado em 1x de R$ 137,40",
+            "Parcelado em 2x de R$ 68,70",
+            "Parcelado em 3x de R$ 45,80",
+            "Parcelado em 4x de R$ 35,35",
+            "Parcelado em 5x de R$ 27,48",
+            "Parcelado em 6x de R$ 22,90"
+        ],
+        "payments": [
+            "Até 6x iguais no <b>cartão de crédito</b>",
+            "Parcela única no <b>débito em conta</b>",
+            "Pagamento no <b>boleto bancário</b>"
+        ]
+      }
+   ]
+}

@@ -13,16 +13,16 @@
 <body>
     <section class="modal">
       <header class="modal___header">
-        <button class="header__btn header__btn--previous">〈 </button>
+        <button class="header__btn header__btn--previous" data-js="prevBtn">〈 </button>
         <h1 class="header__title">Assine o Sexlog VIP</h1>
         <button class="header__btn header__btn--next">X</button>
         <div class="header__breadcrumb">
-          <div class="breadcrumb__step">
+          <div class="breadcrumb__step  breadcrump--active" data-js="firstBreadcrumb">
             <p>
               Escolha o plano ideal pra você
             </p>
           </div>
-          <div class="breadcrumb__step breadcrump--active">
+          <div class="breadcrumb__step" data-js="secondBreadcrumb">
             <p>
               Escolha o plano ideal pra você
             </p>
@@ -30,68 +30,28 @@
         </div>
       </header>
       <main class="modal__steps">
-        <div class="step step--firstStep">
+        <div class="step step--firstStep active" data-js="firstStep">
           <div class="step__item">
-            <div class="step__planPrice">
-              <div class="step__coin">
-                R$
-              </div>
-              <div class="step__price">
-                49
-              </div>
-              <div class="step__cents">
-                90
-              </div>
-              <div class="step__planType">
-                /mês
-              </div>
+            <div class="step__planPrice" id="1" data-js="planPrice">
+
             </div>
             <div class="step__paymentMethods">
-              <ul class="paymentMethods__list">
-                <li class="paymentMethods__item">
-                  <div class="paymentMethods__icon">
-                    <img src="img/icon-creditCard.svg" alt="">
-                  </div>
-                  <span class="paymentMethods__method">Pagamento no <b>cartão de crédito</b></span>
-                </li>
-                <li class="paymentMethods__item">
-                  <div class="paymentMethods__icon">
-                    <img src="img/icon-debit.svg" alt="">
-                  </div>
-                  <span class="paymentMethods__method">Pagamento no <b>cartão de crédito</b></span>
-                </li>
-                <li class="paymentMethods__item">
-                  <div class="paymentMethods__icon">
-                    <img src="img/icon-boleto.svg" alt="">
-                  </div>
-                  <span class="paymentMethods__method">Pagamento no <b>cartão de crédito</b></span>
+              <ul class="paymentMethods__list" data-js="paymentMethodsList">
 
-                </li>
               </ul>
             </div>
           </div>
           <div class="step__item">
-            <div class="step__plans">
-              <label class="step__label step__plans--checked ">
-                <input class="step__input" type="checkbox" value="1 mês">
-                <span class="step__months">1 mês</span>
-              </label>
-              <label class="step__label">
-                <input class="step__input" type="checkbox" value="1 mês">
-                <span class="step__months">3 meses</span>
-              </label>
-              <label class="step__label">
-                <input class="step__input" type="checkbox" value="1 mês">
-                <span class="step__months">6 meses</span>
-              </label>
+            <div class="step__plans" data-js="stepPlans">
+
             </div>
           </div>
         </div>
-        <div class="step step--secondStep">
+        <div class="step step--secondStep" data-js="secondStep">
           <div class="step__choicePlan">
             <p>
               Plano Escolhido:
-              <span class="choicePlan__type">Trimestral - R$ 119,70</span>
+              <span class="choicePlan__type" data-js=""></span>
             </p>
           </div>
           <div class="step__form">
@@ -100,32 +60,49 @@
                 <label for="cardNumber" class="form__label">
                   Número do cartão
                 </label>
-                <input type="text" id="cardNumber" class="form__field" placeholder="Número do cartão">
+                <input type="number" id="cardNumber" class="form__field" data-js="cardNumber" placeholder="Número do cartão">
+                <span class="message">Campo inválido.</span>
               </div>
-              <fieldset class="form__fieldset">
+              <fieldset class="form__fieldset" data-js="dateFieldset">
                 <legend class="fieldset__legend">Validade</legend>
-                <select name="Mês" class="form__field form__field--select">
-                  <option value="Mês">Mês</option>
-                  <option value="Jan">Jan</option>
-                  <option value="Jan">Jan</option>
+                <select name="Mês" class="form__field form__field--select" data-js="dateMonth">
+                  <option value="0">Mês</option>
+                  <option value="1">01</option>
+                  <option value="2">02</option>
+                  <option value="3">03</option>
+                  <option value="4">04</option>
+                  <option value="5">05</option>
+                  <option value="6">06</option>
+                  <option value="7">07</option>
+                  <option value="8">08</option>
+                  <option value="9">09</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
                 </select>
-                <select name="Ano" class="form__field form__field--select">
-                  <option value="Mês">Ano</option>
-                  <option value="2018">2018</option>
-                  <option value="Mês">2019</option>
+                <select name="Ano" class="form__field form__field--select" data-js="dateYear">
+                  <option value="0">Ano</option>
+                  <option value="2017">17</option>
+                  <option value="2018">18</option>
+                  <option value="2019">19</option>
+                  <option value="2020">20</option>
                 </select>
+                <span class="message">Campo inválido.</span>
               </fieldset>
               <div class="form__group form__group--larger">
                 <label for="name" class="form__label">
                   Nome do Titular
                 </label>
-                <input type="text" id="name" class="form__field" placeholder="Nome do Titular">
+                <input type="text" id="name" class="form__field" data-js="cardName" placeholder="Nome do Titular">
+                <span class="message">Campo inválido.</span>
+
               </div>
               <div class="form__group">
                 <label for="securityCode" class="form__label">
                   Código de Segurança
                 </label>
-                <input type="text" id="securityCode" class="form__field form__field--secCode" placeholder="000">
+                <input type="number" id="securityCode" class="form__field form__field--secCode" data-js="securityCode" placeholder="000">
+                <span class="message">Campo inválido.</span>
               </div>
             </form>
           </div>
@@ -135,7 +112,7 @@
             </p>
           </div>
         </div>
-        <div class="step step--finalStep">
+        <div class="step step--finalStep" data-js="finalStep">
           <div class="finalStep__icon">
             <img src="" alt="">
           </div>
@@ -152,10 +129,15 @@
         <div class="footer__seal">
           <img src="img/seal-SSL.png" alt="Secure GlobalSign Seal">
         </div>
-        <button class="footer__btn" type="button">
+        <button class="footer__btn active" type="button" data-js="nextBtn">
           Próximo passo: pagamento
+        </button>
+        <button class="footer__btn" type="button" data-js="finishBtn" disabled>
+          Concluir minha assinatura
         </button>
       </footer>
     </section>
+
+   <script src="js/main.js"></script>
 </body>
 </html>

@@ -27,7 +27,9 @@
     },
     "extends": "airbnb",
     "rules": {
-      "no-console": 1
+      "no-console": 1,
+      "comma-dangle": ["error", "never"],
+      "no-param-reassign": 1
     }
   },
   "devDependencies": {

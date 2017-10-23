@@ -14,6 +14,7 @@ body {
 }
 
 
+
 .modal {
   width: 100%;
 }
@@ -48,6 +49,15 @@ body {
   font-weight: 400;
 }
 
+@media screen and (min-width: 1200px) {
+
+  .header__title {
+    font-weight: bold;
+  }
+
+}
+
+
 .header__btn {
   height: 100%;
   max-height: 60px;
@@ -69,6 +79,7 @@ body {
 }
 
 .header__btn--previous {
+  display: none;
   position: absolute;
   left: 0;
 }
@@ -104,20 +115,24 @@ body {
 
   position: absolute;
   top: 0;
-  right: 0;
+  right: -19px;
+  z-index: 99999;
 
   width: 0;
   height: 0;
 
-  background-color: #fff;
   border-style: solid;
   border-width: 26px 0 25px 20px;
-  border-color: transparent transparent transparent #E9E9E9;
+  border-color: transparent transparent transparent #e6e6e6;
 }
 
 .breadcrump--active {
   color: var(--mainColor);
   background-color: #fff;
+}
+
+.breadcrump--active:first-child::after {
+  border-color: transparent transparent transparent #fff;
 }
 
 /* FOOTER */
@@ -152,6 +167,7 @@ body {
 }
 
 .footer__btn {
+  display: none;
   flex: 40%;
   width: 100%;
   padding: 1.4rem 1rem;
@@ -162,6 +178,10 @@ body {
 
   background-color: var(--accentColor);
   border: none;
+}
+
+.footer__btn:disabled {
+  background-color: grey;
 }
 
 @media screen and (min-width: 1200px) {
@@ -176,6 +196,11 @@ body {
 
 .modal__steps {
   padding: 4rem .4rem;
+  background-color: #F5F5F5
+}
+
+.step {
+  display: none;
 }
 
 
@@ -194,9 +219,19 @@ body {
   flex: 50%;
 }
 
+
 @media screen and (min-width: 1200px) {
 
-  .step--firstStep {
+  .step__item {
+    height: 270px;
+
+  }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+  .step--firstStep.active {
     display: flex;
   }
 
@@ -204,8 +239,8 @@ body {
 
 .step__planPrice {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  height: 6rem;
 }
 
 .step__coin {
@@ -227,6 +262,12 @@ body {
   font-weight: bold;
 }
 
+.step__discount {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+
 .step__planType {
   align-self: flex-end;
   margin-left: -2rem;
@@ -235,35 +276,127 @@ body {
   font-size: 1rem;
 }
 
-.step__plans {
+.step__total {
+  flex: 100%;
   margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  color: var(--secundaryColor);
+  font-size: 1rem;
+  text-align: center;
 }
 
+@media screen and (min-width: 1200px) {
+
+  .step__total {
+    display: block;
+    margin-bottom: 0;
+  }
+
+}
+
+
 .step__label {
-  display: block;
+  display: flex;
+  align-items: center;
+
   margin-top: .4rem;
-  padding: 1.4rem .4rem;
+  padding: 1.4rem 1rem;
 
   color: var(--mainColor);
   font-size: 1.2rem;
   font-weight: bold;
 
+  background-color: #fff;
   border: 1px solid #e6e6e6;
   border-radius: 6px;
 }
 
 .step__plans--checked {
+  position: relative;
+
   color: #fff;
   background-color: var(--mainColor);
 }
 
+@media screen and (min-width: 1200px) {
+
+  .step__plans--checked::before {
+    content: '';
+    position: absolute;
+    top: 1.4rem;
+    left: -.8rem;
+
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 14px 12px 0;
+    border-color: transparent var(--mainColor) transparent transparent;
+  }
+
+}
+
+
+.step__plans--checked .step__discount {
+  color: #fff;
+}
+
 .step__paymentMethods {
+  display: none;
   width: 60%;
-  margin: 3rem auto 0 auto;
-  margin-top: 3rem;
+  margin: 1rem auto 0 auto;
+
   font-size: .9rem;
-  text-align: center;
   border-top: 1px dashed #e6e6e6;
+}
+
+.step__label {
+  position: relative;
+}
+
+.step__input {
+  visibility: hidden;
+}
+
+.check__icon {
+  position: absolute;
+  top: 1.4rem;
+  left: .8rem;
+
+  display: block;
+  height: 20px;
+  width: 20px;
+
+  border-radius: 50%;
+  border:  2px solid var(--secundaryColor);
+}
+
+.step__input:checked + .check__icon {
+  border-color: #fff;
+}
+
+.step__input:checked + .check__icon::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+@media screen and (min-width: 1200px) {
+
+  .step__paymentMethods {
+    display: block;
+  }
+
+}
+
+.step__months {
+  flex: 50%;
+  padding-left: .4rem;
 }
 
 .paymentMethods__list {
@@ -277,6 +410,9 @@ body {
 
 .paymentMethods__icon {
   display: inline-block;
+  width: 20px;
+  height: 20px;
+
   margin-right: .2rem;
 }
 
@@ -286,19 +422,15 @@ body {
   vertical-align: super;
 }
 
-.step--firstStep {
-  display: none;
-}
 
 /* SECOND STEP */
 
 .step--secondStep {
-  display: none;
   padding-left: .2rem;
   padding-right: 2rem;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1200px) {
 
   .step--secondStep {
     width: 75%;
@@ -319,7 +451,7 @@ body {
   color: #000;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1200px) {
 
   .step__choicePlan  {
     display: block;
@@ -327,7 +459,7 @@ body {
 
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1200px) {
 
   .form {
     display: flex;
@@ -355,7 +487,7 @@ body {
   border-radius: 3px;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1200px) {
 
   .form__group, .form__fieldset {
     flex: 20%;
@@ -376,7 +508,7 @@ body {
   margin-bottom: 1.4rem;
 }
 
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1200px) {
 
   .form__group--larger {
     flex: 60%;
@@ -433,4 +565,26 @@ body {
   text-decoration: none;
   background-color: var(--mainColor);
   border-radius: 6px;
+}
+
+.active {
+  display: block;
+}
+
+
+/* MESSAGES */
+
+.message {
+  display: none;
+}
+
+.invalid__field {
+  background: rgba(255, 0, 0, .1);
+}
+
+.invalid__field + .message {
+  display: block;
+
+  color: red;
+  font-size: .8rem;
 }
