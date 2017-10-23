@@ -117,16 +117,13 @@ function showPlansData(plans) {
 }
 
 function checkAllInputs() {
-  const isAllOk = inputs.every((input) => {
-     return input.dataset.verified === 'true';
-  });
+  const isAllOk = inputs.every(input => input.dataset.verified === 'true');
 
-  if(isAllOk) {
+  if (isAllOk) {
     finishBtn.disabled = false;
   } else {
     finishBtn.disabled = true;
   }
-
 }
 
 function showErrorMessage(element) {
@@ -179,7 +176,6 @@ function paymentStep() {
       dateMonth.dataset.verified = 'false';
       dateYear.dataset.verified = 'false';
       checkAllInputs();
-
     } else {
       dateMonth.classList.remove('invalid__field');
       dateYear.classList.remove('invalid__field');
@@ -195,7 +191,6 @@ function paymentStep() {
       showErrorMessage(this);
       this.dataset.verified = 'false';
       checkAllInputs();
-
     } else {
       this.classList.remove('invalid__field');
       this.dataset.verified = 'true';
@@ -208,10 +203,9 @@ function paymentStep() {
       showErrorMessage(this);
       this.dataset.verified = 'false';
       checkAllInputs();
-
     } else {
       this.classList.remove('invalid__field');
-      this.dataset.verified ='true';
+      this.dataset.verified = 'true';
       checkAllInputs();
     }
   });
